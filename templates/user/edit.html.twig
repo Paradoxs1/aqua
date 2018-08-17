@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <h1>Edit User</h1>
+                {{ form_start(userForm) }}
+                    {{ form_errors(userForm) }}
+
+                    {{ form_row(userForm.firstName) }}
+                    {{ form_row(userForm.lastName) }}
+                    {{ form_row(userForm.email) }}
+                    {{ form_row(userForm.universityName) }}
+
+                    {{ form_row(userForm.isScientist) }}
+
+                    <button type="submit" class="btn btn-primary" formnovalidate>Save</button>
+                {{ form_end(userForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
